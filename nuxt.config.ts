@@ -7,6 +7,9 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'en',
       },
+      bodyAttrs: {
+        class: 'bg-[#040A18]',
+      },
     },
   },
   modules: ['@nuxtjs/tailwindcss'],
