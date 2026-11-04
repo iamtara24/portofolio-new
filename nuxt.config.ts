@@ -10,5 +10,10 @@ export default defineNuxtConfig({
     },
   },
   modules: ['@nuxtjs/tailwindcss'],
-  devtools: { enabled: false }
+  devtools: { enabled: false },
+  postcss: {
+    plugins: {
+      "tailwindcss/nesting": false,
+    },
+  },
 })
