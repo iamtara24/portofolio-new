@@ -12,7 +12,7 @@ export default defineNuxtConfig({
       },
     },
   },
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', 'nuxt-lucide-icons'],
   devtools: { enabled: false },
   postcss: {
     plugins: {

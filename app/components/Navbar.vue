@@ -46,7 +46,6 @@ onUnmounted(() => {
     ]"
   >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-      <!-- Left: Logo -->
       <a
         href="#home"
         :class="[
@@ -61,7 +60,6 @@ onUnmounted(() => {
         />
       </a>
 
-      <!-- Center: Desktop Navigation -->
       <nav class="hidden md:flex items-center gap-8">
         <a
           v-for="link in navLinks"
@@ -70,26 +68,28 @@ onUnmounted(() => {
           class="relative py-1 text-sm lg:text-base font-medium text-slate-300 hover:text-white transition-colors duration-200 group"
         >
           <span>{{ link.name }}</span>
-          <!-- Underline animation slide left to right -->
           <span
             class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-[#5544D3] to-[#8A46F2] scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100"
           ></span>
         </a>
       </nav>
 
-      <!-- Right: Action Button (Desktop) -->
       <div class="hidden md:flex items-center">
         <a
           href="https://www.linkedin.com/in/anggin-megantara"
           target="_blank"
           rel="noopener noreferrer"
-          class="px-6 py-2.5 rounded-lg text-white font-medium text-sm lg:text-base bg-gradient-to-r from-[#5544D3] to-[#8A46F2] hover:opacity-95 hover:shadow-lg hover:shadow-[#8A46F2]/30 active:scale-95 transition-all duration-200"
+          class="relative overflow-hidden inline-flex items-center gap-2 px-6 py-2.5 rounded-lg text-white font-medium text-sm lg:text-base bg-gradient-to-r from-[#5544D3] to-[#8A46F2] border border-white/20 shadow-lg shadow-[#8A46F2]/25 active:scale-95 transition-all duration-300 group"
         >
-          Lets Talk
+          <span
+            class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out pointer-events-none -skew-x-12"
+          ></span>
+
+          <span class="relative z-10">Lets Talk</span>
+          <LucideSquareArrowOutUpRight class="w-4 h-4 text-white relative z-10 shrink-0" />
         </a>
       </div>
 
-      <!-- Mobile: Hamburger Button -->
       <button
         type="button"
         class="md:hidden flex items-center justify-center p-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 transition-colors focus:outline-none"
@@ -117,9 +117,8 @@ onUnmounted(() => {
       </button>
     </div>
 
-    <!-- Mobile: Drawer Sidebar (80% width) with Slide Animation -->
+    <!-- Mobile Drawer Sidebar -->
     <Teleport to="body">
-      <!-- Backdrop Overlay -->
       <transition
         enter-active-class="transition-opacity duration-300 ease-out"
         enter-from-class="opacity-0"
@@ -135,7 +134,7 @@ onUnmounted(() => {
         ></div>
       </transition>
 
-      <!-- Sidebar Drawer (z-40, sits below the z-50 navbar) -->
+      <!-- Sidebar Drawer -->
       <transition
         enter-active-class="transition-transform duration-300 ease-out"
         enter-from-class="-translate-x-full"
@@ -149,7 +148,6 @@ onUnmounted(() => {
           class="fixed inset-y-0 left-0 w-[80%] max-w-sm h-full bg-[#040A18] border-r border-white/10 shadow-2xl z-40 md:hidden flex flex-col justify-between p-6"
         >
           <div>
-            <!-- Top Logo inside drawer (tanpa tombol X di dalam) -->
             <div class="flex items-center pb-6 border-b border-white/10">
               <img
                 :src="logoLight"
@@ -178,10 +176,15 @@ onUnmounted(() => {
               href="https://www.linkedin.com/in/anggin-megantara"
               target="_blank"
               rel="noopener noreferrer"
-              class="block w-full text-center py-3 rounded-lg text-white font-medium text-sm bg-gradient-to-r from-[#5544D3] to-[#8A46F2] hover:opacity-95 shadow-lg shadow-[#8A46F2]/25 transition-all"
+              class="relative overflow-hidden flex items-center justify-center gap-2 w-full text-center py-3 rounded-lg text-white font-medium text-sm bg-gradient-to-r from-[#5544D3] to-[#8A46F2] border border-white/20 shadow-lg shadow-[#8A46F2]/25 transition-all group"
               @click="closeMobileMenu"
             >
-              Lets Talk
+              <span
+                class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out pointer-events-none -skew-x-12"
+              ></span>
+
+              <span class="relative z-10">Lets Talk</span>
+              <LucideSquareArrowOutUpRight class="w-4 h-4 text-white relative z-10 shrink-0" />
             </a>
           </div>
         </div>
