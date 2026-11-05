@@ -5,6 +5,7 @@ import logoDark from '~/assets/img/logo-dark.png'
 
 const isScrolled = ref(false)
 const isMobileMenuOpen = ref(false)
+const activeSection = ref('home')
 
 const navLinks = [
   { name: 'Home', href: '#home' },
@@ -13,6 +14,10 @@ const navLinks = [
   { name: 'Project', href: '#project' },
   { name: 'Contact', href: '#contact' },
 ]
+
+const setActiveSection = (name: string) => {
+  activeSection.value = name.toLowerCase()
+}
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 20
@@ -28,6 +33,12 @@ const closeMobileMenu = () => {
 
 onMounted(() => {
   handleScroll()
+  if (window.location.hash) {
+    const hash = window.location.hash.replace('#', '').toLowerCase()
+    if (navLinks.some(link => link.name.toLowerCase() === hash)) {
+      activeSection.value = hash
+    }
+  }
   window.addEventListener('scroll', handleScroll, { passive: true })
 })
 
@@ -60,16 +71,29 @@ onUnmounted(() => {
         />
       </a>
 
+      <!-- Center: Desktop Navigation -->
       <nav class="hidden md:flex items-center gap-8">
         <a
           v-for="link in navLinks"
           :key="link.name"
           :href="link.href"
-          class="relative py-1 text-sm lg:text-base font-medium text-slate-300 hover:text-white transition-colors duration-200 group"
+          :class="[
+            'relative py-1 text-sm lg:text-base font-medium transition-colors duration-200 group',
+            activeSection === link.name.toLowerCase()
+              ? 'text-white'
+              : 'text-slate-400 hover:text-white'
+          ]"
+          @click="setActiveSection(link.name)"
         >
           <span>{{ link.name }}</span>
+          <!-- Underline: stays active if selected, otherwise slides in on hover -->
           <span
-            class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-[#5544D3] to-[#8A46F2] scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100"
+            :class="[
+              'absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-[#5544D3] to-[#8A46F2] origin-left transition-transform duration-300 ease-out',
+              activeSection === link.name.toLowerCase()
+                ? 'scale-x-100'
+                : 'scale-x-0 group-hover:scale-x-100'
+            ]"
           ></span>
         </a>
       </nav>
@@ -162,10 +186,19 @@ onUnmounted(() => {
                 v-for="link in navLinks"
                 :key="link.name"
                 :href="link.href"
-                class="text-lg font-medium text-slate-300 hover:text-white py-1 transition-colors"
-                @click="closeMobileMenu"
+                :class="[
+                  'text-lg font-medium py-1 transition-colors flex items-center justify-between',
+                  activeSection === link.name.toLowerCase()
+                    ? 'text-white'
+                    : 'text-slate-400 hover:text-white'
+                ]"
+                @click="() => { setActiveSection(link.name); closeMobileMenu() }"
               >
-                {{ link.name }}
+                <span>{{ link.name }}</span>
+                <span
+                  v-if="activeSection === link.name.toLowerCase()"
+                  class="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#5544D3] to-[#8A46F2]"
+                ></span>
               </a>
             </nav>
           </div>
