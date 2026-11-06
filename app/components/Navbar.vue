@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 import logoLight from '~/assets/img/logo.png'
-import logoDark from '~/assets/img/logo-dark.png'
 
 const isScrolled = ref(false)
 const isMobileMenuOpen = ref(false)
@@ -52,7 +51,7 @@ onUnmounted(() => {
     :class="[
       'fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out',
       isScrolled
-        ? 'py-3.5 bg-[#040A18]/80 backdrop-blur-md border-b border-white/10 shadow-lg shadow-black/30'
+        ? 'py-3.5 bg-[#040A18]/33 backdrop-blur-md shadow-lg shadow-black/30'
         : 'py-5 bg-transparent'
     ]"
   >
@@ -65,7 +64,7 @@ onUnmounted(() => {
         ]"
       >
         <img
-          :src="isScrolled ? logoDark : logoLight"
+          :src="logoLight"
           alt="Anggin Megantara Logo"
           class="h-9 w-auto object-contain transition-all duration-300"
         />
