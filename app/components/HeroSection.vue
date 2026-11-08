@@ -31,12 +31,12 @@ const techStacks = [
           <img
             :src="heroImg"
             alt="Anggin Megantara"
-            class="w-auto max-h-[430px] sm:max-h-[470px] lg:max-h-[500px] object-contain drop-shadow-2xl relative z-10"
+            class="animate__animated animate__fadeInLeft w-auto max-h-[430px] sm:max-h-[470px] lg:max-h-[500px] object-contain drop-shadow-2xl relative z-10"
           />
 
           <!-- Floating Code Card -->
           <div
-            class="lg:absolute hidden md:block top-2/3 -translate-y-1/2 left-0 z-20 w-[85%] max-w-[270px]"
+            class="animate__animated animate__fadeInUp animate__delay-1s lg:absolute hidden md:block top-1/2 -translate-y-1/2 left-0 z-20 w-[85%] max-w-[270px]"
           >
             <div
               class="w-full bg-[#040A18]/90 backdrop-blur-xl border border-white/10 rounded-2xl p-4 shadow-2xl shadow-black/80 transition-transform duration-300 hover:-translate-y-1"
@@ -87,15 +87,23 @@ const techStacks = [
         <div class="flex flex-col justify-center items-start space-y-6">
           <!-- Badge -->
           <div
-            class="inline-flex items-center px-3.5 py-1.5 rounded-full bg-slate-800 border border-white/10 text-violet-500 text-xs font-semibold tracking-wider uppercase"
+            class="animate__animated animate__fadeInDown inline-flex items-center px-3.5 py-1.5 rounded-full bg-slate-800 border border-white/10 text-violet-500 text-xs font-semibold tracking-wider uppercase"
           >
             FRONTEND DEVELOPER
           </div>
 
           <!-- Titles -->
-          <div class="space-y-2">
+          <div class="animate__animated animate__fadeInRight space-y-2">
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight">
-              Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#5544D3] to-[#8A46F2]">Tara</span>
+              Hi, I'm
+              <span class="relative inline-block align-baseline">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#5544D3] to-[#8A46F2]">
+                  Tara
+                </span>
+                <span aria-hidden="true" class="text-sheen">
+                  Tara
+                </span>
+              </span>
             </h1>
             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-300">
               I build modern web experiences.
@@ -103,12 +111,12 @@ const techStacks = [
           </div>
 
           <!-- Description -->
-          <p class="text-slate-400 text-base leading-relaxed max-w-xl">
+          <p class="animate__animated animate__fadeInUp animate__delay-1s text-slate-400 text-base leading-relaxed max-w-xl">
             I specialize in crafting responsive, intuitive, and high-performing web interfaces using modern frontend technologies. Turning ideas into seamless digital experiences through clean code and thoughtful design.
           </p>
 
           <!-- Buttons -->
-          <div class="flex flex-wrap items-center gap-4 pt-2">
+          <div class="animate__animated animate__fadeInUp animate__delay-1s flex flex-wrap items-center gap-4 pt-2">
             <!-- Explore Work Button  -->
             <a
               href="#project"
@@ -133,7 +141,7 @@ const techStacks = [
           </div>
 
           <!-- Tech Stack -->
-          <div class="pt-4">
+          <div class="animate__animated animate__fadeInUp animate__delay-1s pt-4">
             <span class="block text-xs font-semibold tracking-widest uppercase text-slate-400 mb-3">
               Tech Stack
             </span>
@@ -153,3 +161,38 @@ const techStacks = [
     </div>
   </section>
 </template>
+
+<style scoped>
+.text-sheen {
+  position: absolute;
+  inset: 0;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+    115deg,
+    transparent 0%,
+    transparent 35%,
+    rgba(255, 255, 255, 0.95) 50%,
+    transparent 65%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shine-sweep 4s ease-in-out infinite;
+  pointer-events: none;
+  user-select: none;
+}
+
+@keyframes shine-sweep {
+  0% {
+    background-position: 250% 0;
+  }
+  35% {
+    background-position: -250% 0;
+  }
+  100% {
+    background-position: -250% 0;
+  }
+}
+</style>
