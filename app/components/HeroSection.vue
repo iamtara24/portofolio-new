@@ -1,5 +1,21 @@
 <script setup lang="ts">
 import heroImg from '~/assets/img/hero-img.png'
+import vueLogo from '~/assets/img/techstack/Vue.svg'
+import nuxtLogo from '~/assets/img/techstack/nuxt.png'
+import reactLogo from '~/assets/img/techstack/React.svg'
+import nextLogo from '~/assets/img/techstack/next.png'
+import typescriptLogo from '~/assets/img/techstack/Typescript.svg'
+import tailwindLogo from '~/assets/img/techstack/tailwind.png'
+import cvPdf from '~/assets/download/CV_ATS_Anggin_Megantara_English.pdf'
+
+const techStacks = [
+  { name: 'Vue.js', icon: vueLogo },
+  { name: 'Nuxt.js', icon: nuxtLogo },
+  { name: 'React', icon: reactLogo },
+  { name: 'Next.js', icon: nextLogo },
+  { name: 'TypeScript', icon: typescriptLogo },
+  { name: 'Tailwind CSS', icon: tailwindLogo },
+]
 </script>
 
 <template>
@@ -11,7 +27,7 @@ import heroImg from '~/assets/img/hero-img.png'
       <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-12">
         <!-- Left Side: Hero Image & Floating Code Card -->
         <div class="relative flex justify-center items-center">
-          <!-- Hero Photo (scaled down) -->
+          <!-- Hero Photo -->
           <img
             :src="heroImg"
             alt="Anggin Megantara"
@@ -20,12 +36,12 @@ import heroImg from '~/assets/img/hero-img.png'
 
           <!-- Floating Code Card -->
           <div
-            class="lg:absolute hidden md:block top-2/3 -translate-y-1/2 left-0 -left-7 z-20 w-[85%] max-w-[270px]"
+            class="lg:absolute hidden md:block top-2/3 -translate-y-1/2 left-0 z-20 w-[85%] max-w-[270px]"
           >
             <div
               class="w-full bg-[#040A18]/90 backdrop-blur-xl border border-white/10 rounded-2xl p-4 shadow-2xl shadow-black/80 transition-transform duration-300 hover:-translate-y-1"
             >
-              <!-- Card Header: </> Code and iOS/Linux window controls -->
+              <!-- Card Header: Code and iOS/Linux window controls -->
               <div class="flex items-center justify-between pb-3 border-b border-white/10">
                 <span class="font-mono text-xs font-semibold text-slate-300 flex items-center gap-1.5">
                   <span class="text-purple-400 font-bold">&lt;/&gt;</span>
@@ -67,9 +83,71 @@ import heroImg from '~/assets/img/hero-img.png'
           </div>
         </div>
 
-        <!-- Right Side: Content Container (siap diisi sesuai arahan) -->
-        <div class="flex flex-col justify-center">
-          <!-- Konten hero akan ditempatkan di sini -->
+        <!-- Right Side: Content Container -->
+        <div class="flex flex-col justify-center items-start space-y-6">
+          <!-- Badge -->
+          <div
+            class="inline-flex items-center px-3.5 py-1.5 rounded-full bg-slate-800 border border-white/10 text-violet-500 text-xs font-semibold tracking-wider uppercase"
+          >
+            FRONTEND DEVELOPER
+          </div>
+
+          <!-- Titles -->
+          <div class="space-y-2">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight">
+              Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#5544D3] to-[#8A46F2]">Tara</span>
+            </h1>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-300">
+              I build modern web experiences.
+            </h2>
+          </div>
+
+          <!-- Description -->
+          <p class="text-slate-400 text-base leading-relaxed max-w-xl">
+            I specialize in crafting responsive, intuitive, and high-performing web interfaces using modern frontend technologies. Turning ideas into seamless digital experiences through clean code and thoughtful design.
+          </p>
+
+          <!-- Buttons -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <!-- Explore Work Button  -->
+            <a
+              href="#project"
+              class="relative overflow-hidden inline-flex items-center justify-center px-6 py-3 rounded-lg text-white font-medium text-sm sm:text-base bg-gradient-to-r from-[#5544D3] to-[#8A46F2] border border-white/20 shadow-lg shadow-[#8A46F2]/25 active:scale-95 transition-all duration-300 group"
+            >
+              <span
+                class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out pointer-events-none -skew-x-12"
+              ></span>
+              <span class="relative z-10">Explore Work</span>
+            </a>
+
+            <!-- Download CV Button -->
+            <a
+              :href="cvPdf"
+              download="CV_ATS_Anggin_Megantara_English.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center px-6 py-3 rounded-lg text-white font-medium text-sm sm:text-base border border-white/20 hover:bg-white/5 hover:border-white/40 active:scale-95 transition-all duration-200"
+            >
+              Download CV
+            </a>
+          </div>
+
+          <!-- Tech Stack -->
+          <div class="pt-4">
+            <span class="block text-xs font-semibold tracking-widest uppercase text-slate-400 mb-3">
+              Tech Stack
+            </span>
+            <div class="flex flex-wrap items-center gap-3 sm:gap-4">
+              <div
+                v-for="tech in techStacks"
+                :key="tech.name"
+                class="flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#0D182E]/80 border border-white/10 p-2.5 transition-all duration-200 hover:scale-110 hover:border-white/25 hover:bg-[#0D182E]"
+                :title="tech.name"
+              >
+                <img :src="tech.icon" :alt="tech.name" class="w-full h-full object-contain" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
