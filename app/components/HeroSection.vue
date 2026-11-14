@@ -94,7 +94,7 @@ const techStacks = [
 
           <!-- Titles -->
           <div class="animate__animated animate__fadeInRight space-y-2">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight">
+            <h1 class="text-5xl lg:text-6xl font-extrabold text-white tracking-tight">
               Hi, I'm
               <span class="relative inline-block align-baseline">
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#5544D3] to-[#8A46F2]">
@@ -105,7 +105,7 @@ const techStacks = [
                 </span>
               </span>
             </h1>
-            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-300">
+            <h2 class="text-3xl lg:text-4xl font-bold text-slate-300">
               I build modern web experiences.
             </h2>
           </div>
