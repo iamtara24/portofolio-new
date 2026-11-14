@@ -7,6 +7,7 @@ export default defineNuxtConfig({
       title: 'Portofolio | Anggin Megantara',
       htmlAttrs: {
         lang: 'en',
+        class: 'scroll-smooth',
       },
       bodyAttrs: {
         class: 'bg-[#040A18] font-sans',

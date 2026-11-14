@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
   html, body {
     font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
   }

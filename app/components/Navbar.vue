@@ -47,15 +47,20 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <header
-    :class="[
-      'fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out',
-      isScrolled
-        ? 'py-3.5 bg-[#040A18]/33 backdrop-blur-md shadow-lg shadow-black/30'
-        : 'py-5 bg-transparent'
-    ]"
-  >
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+  <header class="fixed top-0 left-0 right-0 z-50">
+    <!-- Running Text Banner -->
+    <DevelopmentBanner />
+
+    <!-- Main Navigation Bar -->
+    <div
+      :class="[
+        'transition-all duration-300 ease-in-out',
+        isScrolled
+          ? 'py-3.5 bg-[#040A18]/33 backdrop-blur-md shadow-lg shadow-black/30'
+          : 'py-5 bg-transparent'
+      ]"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
       <a
         href="#home"
         :class="[
@@ -70,7 +75,7 @@ onUnmounted(() => {
         />
       </a>
 
-      <!-- Center: Desktop Navigation -->
+      <!-- Desktop Navigation -->
       <nav class="hidden md:flex items-center gap-8">
         <a
           v-for="link in navLinks"
@@ -85,7 +90,7 @@ onUnmounted(() => {
           @click="setActiveSection(link.name)"
         >
           <span>{{ link.name }}</span>
-          <!-- Underline: stays active if selected, otherwise slides in on hover -->
+          <!-- Underline -->
           <span
             :class="[
               'absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-[#5544D3] to-[#8A46F2] origin-left transition-transform duration-300 ease-out',
@@ -139,8 +144,9 @@ onUnmounted(() => {
         </svg>
       </button>
     </div>
+  </div>
 
-    <!-- Mobile Drawer Sidebar -->
+  <!-- Mobile Drawer Sidebar -->
     <Teleport to="body">
       <transition
         enter-active-class="transition-opacity duration-300 ease-out"

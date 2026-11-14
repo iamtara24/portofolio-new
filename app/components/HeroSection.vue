@@ -21,11 +21,11 @@ const techStacks = [
 <template>
   <section
     id="home"
-    class="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden"
+    class="relative min-h-screen flex items-center pt-24 overflow-hidden"
   >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
       <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-12">
-        <!-- Left Side: Hero Image & Floating Code Card -->
+        <!-- Left Side -->
         <div class="relative flex justify-center items-center">
           <!-- Hero Photo -->
           <img
@@ -41,7 +41,7 @@ const techStacks = [
             <div
               class="w-full bg-[#040A18]/90 backdrop-blur-xl border border-white/10 rounded-2xl p-4 shadow-2xl shadow-black/80 transition-transform duration-300 hover:-translate-y-1"
             >
-              <!-- Card Header: Code and iOS/Linux window controls -->
+              <!-- Code and iOS/Linux window controls -->
               <div class="flex items-center justify-between pb-3 border-b border-white/10">
                 <span class="font-mono text-xs font-semibold text-slate-300 flex items-center gap-1.5">
                   <span class="text-purple-400 font-bold">&lt;/&gt;</span>
@@ -54,7 +54,7 @@ const techStacks = [
                 </div>
               </div>
 
-              <!-- Card Body: JavaScript Code Snippet with Syntax Highlighting -->
+              <!-- JavaScript Code Snippet with Syntax Highlighting -->
               <div class="pt-3 font-mono text-[11px] sm:text-xs leading-relaxed">
                 <p>
                   <span class="text-purple-400 font-semibold">const</span>
@@ -83,13 +83,13 @@ const techStacks = [
           </div>
         </div>
 
-        <!-- Right Side: Content Container -->
+        <!-- Right Side -->
         <div class="flex flex-col justify-center items-start space-y-6">
           <!-- Badge -->
           <div
             class="animate__animated animate__fadeInDown inline-flex items-center px-3.5 py-1.5 rounded-full bg-slate-800 border border-white/10 text-violet-500 text-xs font-semibold tracking-wider uppercase"
           >
-            FRONTEND DEVELOPER
+            I'M A FRONTEND DEVELOPER
           </div>
 
           <!-- Titles -->

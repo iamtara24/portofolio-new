@@ -17,7 +17,7 @@ onMounted(() => {
     const isDismissed = sessionStorage.getItem('mobile_notice_dismissed') === 'true'
     if (isDismissed) return
 
-    // Deteksi kombinasi lebar layar HP (<768px) dan User-Agent mobile
+    // Deteksi kombinasi lebar layar HP dan User-Agent mobile
     const isMobileDevice =
       window.innerWidth < 768 ||
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
@@ -74,7 +74,7 @@ onMounted(() => {
               </p>
             </div>
 
-            <!-- Action Button: Tetap Lanjutkan -->
+            <!-- Action Button -->
             <div class="pt-2">
               <button
                 type="button"
