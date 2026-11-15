@@ -16,6 +16,8 @@ const techStacks = [
   { name: 'TypeScript', icon: typescriptLogo },
   { name: 'Tailwind CSS', icon: tailwindLogo },
 ]
+
+const isLoaded = useState('isPageLoaded', () => false)
 </script>
 
 <template>
@@ -31,12 +33,18 @@ const techStacks = [
           <img
             :src="heroImg"
             alt="Anggin Megantara"
-            class="animate__animated animate__fadeInLeft w-auto max-h-[430px] sm:max-h-[470px] lg:max-h-[500px] object-contain drop-shadow-2xl relative z-10"
+            :class="[
+              'w-auto max-h-[430px] sm:max-h-[470px] lg:max-h-[500px] object-contain drop-shadow-2xl relative z-10',
+              isLoaded ? 'animate__animated animate__fadeInLeft' : 'opacity-0'
+            ]"
           />
 
           <!-- Floating Code Card -->
           <div
-            class="animate__animated animate__fadeInUp animate__delay-1s lg:absolute hidden md:block top-1/2 -translate-y-1/2 left-0 z-20 w-[85%] max-w-[270px]"
+            :class="[
+              'lg:absolute hidden md:block top-1/2 -translate-y-1/2 left-0 z-20 w-[85%] max-w-[270px]',
+              isLoaded ? 'animate__animated animate__fadeInUp animate__delay-1s' : 'opacity-0'
+            ]"
           >
             <div
               class="w-full bg-[#040A18]/90 backdrop-blur-xl border border-white/10 rounded-2xl p-4 shadow-2xl shadow-black/80 transition-transform duration-300 hover:-translate-y-1"
@@ -87,13 +95,21 @@ const techStacks = [
         <div class="flex flex-col justify-center items-start space-y-6">
           <!-- Badge -->
           <div
-            class="animate__animated animate__fadeInDown inline-flex items-center px-3.5 py-1.5 rounded-full bg-slate-800 border border-white/10 text-violet-500 text-xs font-semibold tracking-wider uppercase"
+            :class="[
+              'inline-flex items-center px-3.5 py-1.5 rounded-full bg-slate-800 border border-white/10 text-violet-500 text-xs font-semibold tracking-wider uppercase',
+              isLoaded ? 'animate__animated animate__fadeInDown' : 'opacity-0'
+            ]"
           >
             I'M A FRONTEND DEVELOPER
           </div>
 
           <!-- Titles -->
-          <div class="animate__animated animate__fadeInRight space-y-2">
+          <div
+            :class="[
+              'space-y-2',
+              isLoaded ? 'animate__animated animate__fadeInRight' : 'opacity-0'
+            ]"
+          >
             <h1 class="text-5xl lg:text-6xl font-extrabold text-white tracking-tight">
               Hi, I'm
               <span class="relative inline-block align-baseline">
@@ -111,12 +127,22 @@ const techStacks = [
           </div>
 
           <!-- Description -->
-          <p class="animate__animated animate__fadeInUp animate__delay-1s text-slate-400 text-base leading-relaxed max-w-xl">
+          <p
+            :class="[
+              'text-slate-400 text-base leading-relaxed max-w-xl',
+              isLoaded ? 'animate__animated animate__fadeInUp animate__delay-1s' : 'opacity-0'
+            ]"
+          >
             I specialize in crafting responsive, intuitive, and high-performing web interfaces using modern frontend technologies. Turning ideas into seamless digital experiences through clean code and thoughtful design.
           </p>
 
           <!-- Buttons -->
-          <div class="animate__animated animate__fadeInUp animate__delay-1s flex flex-wrap items-center gap-4 pt-2">
+          <div
+            :class="[
+              'flex flex-wrap items-center gap-4 pt-2',
+              isLoaded ? 'animate__animated animate__fadeInUp animate__delay-1s' : 'opacity-0'
+            ]"
+          >
             <!-- Explore Work Button  -->
             <a
               href="#project"
@@ -141,7 +167,12 @@ const techStacks = [
           </div>
 
           <!-- Tech Stack -->
-          <div class="animate__animated animate__fadeInUp animate__delay-1s pt-4">
+          <div
+            :class="[
+              'pt-4',
+              isLoaded ? 'animate__animated animate__fadeInUp animate__delay-1s' : 'opacity-0'
+            ]"
+          >
             <span class="block text-xs font-semibold tracking-widest uppercase text-slate-400 mb-3">
               Tech Stack
             </span>

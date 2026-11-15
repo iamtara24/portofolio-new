@@ -19,7 +19,7 @@ export default defineNuxtConfig({
       ],
     },
   },
-  modules: ['@nuxtjs/tailwindcss', 'nuxt-lucide-icons'],
+  modules: ['@nuxtjs/tailwindcss', 'nuxt-lucide-icons', 'nuxt-lottie'],
   devtools: { enabled: false },
   postcss: {
     plugins: {
