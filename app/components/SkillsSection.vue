@@ -130,7 +130,7 @@ const getLevelBadgeClass = (level: Skill['level']) => {
       </div>
 
       <!-- Additional Tools & Technologies -->
-      <div class="py-8 sm:py-14 border-t border-white/10 flex flex-col md:flex-row items-center gap-6 sm:gap-8 lg:gap-10">
+      <div class="pt-8 sm:pt-14 border-t border-white/10 flex flex-col md:flex-row items-center gap-6 sm:gap-8 lg:gap-10">
         <span class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-slate-400 shrink-0">
           Additional Tools & Technologies
         </span>
