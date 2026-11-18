@@ -44,7 +44,7 @@
   {
     "id": 7,
     "title": "Aplikasi Pertambangan",
-    "description": "Aplikasi untuk mempermudah proses bisnis di perusahaan pertambangan AMP BIO Group.",
+    "description": "Aplikasi untuk mempermudah proses bisnis di perusahaan pertambangan AMP BIO Group hasil kolaborasi dengan PT JMC Indonesia.",
     "image": "proyek7.png",
     "techStack": ["HTML", "Yii2", "Bootstrap"]
   },
