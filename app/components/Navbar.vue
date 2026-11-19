@@ -20,6 +20,31 @@ const setActiveSection = (name: string) => {
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 20
+
+  const isBottom =
+    window.innerHeight + Math.round(window.scrollY) >=
+    document.documentElement.scrollHeight - 60
+
+  if (isBottom) {
+    activeSection.value = 'contact'
+    return
+  }
+
+  if (window.scrollY < 120) {
+    activeSection.value = 'home'
+    return
+  }
+
+  const scrollPosition = window.scrollY + 180
+
+  for (const link of [...navLinks].reverse()) {
+    const id = link.name.toLowerCase()
+    const section = document.getElementById(id)
+    if (section && scrollPosition >= section.offsetTop) {
+      activeSection.value = id
+      break
+    }
+  }
 }
 
 const toggleMobileMenu = () => {
@@ -48,9 +73,6 @@ onUnmounted(() => {
 
 <template>
   <header class="fixed top-0 left-0 right-0 z-50">
-    <!-- Running Text Banner -->
-    <DevelopmentBanner />
-
     <!-- Main Navigation Bar -->
     <div
       :class="[
