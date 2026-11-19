@@ -32,7 +32,7 @@ const isLoaded = useState('isPageLoaded', () => false)
           <!-- Hero Photo -->
           <img
             :src="heroImg"
-            alt="Anggin Megantara"
+            alt="Anggin Megantara - Senior Frontend Developer"
             :class="[
               'w-auto max-h-[430px] sm:max-h-[470px] lg:max-h-[500px] object-contain drop-shadow-2xl relative z-10',
               isLoaded ? 'animate__animated animate__fadeInLeft' : 'opacity-0'
