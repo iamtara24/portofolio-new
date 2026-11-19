@@ -2,63 +2,63 @@
   {
     "id": 1,
     "title": "EVAPOS",
-    "description": "Hasil Kolaborasi dengan Evara Indonesia, sebuah aplikasi kasir berbasis web yang cepat dan responsif untuk bisnis ritel dan restoran.",
+    "description": "A collaborative project with Evara Indonesia, building a fast and responsive web-based Point of Sale (POS) application for retail and restaurant businesses.",
     "image": "proyek1.png",
     "techStack": ["Vue.js", "Tailwind CSS", "TypeScript"]
   },
   {
     "id": 2,
     "title": "Company Profile PT Persada Puri Tama",
-    "description": "Hasil Kolaborasi dengan PT JMC Indonesia untuk mengasilkan aplikasi property PT Persada Puri Tama.",
+    "description": "Developed in collaboration with PT JMC Indonesia to deliver a modern property web platform for PT Persada Puri Tama.",
     "image": "proyek2.png",
     "techStack": ["HTML", "Yii2", "Bootstrap"]
   },
   {
     "id": 3,
-    "title": "Maintenance Mesin App",
-    "description": "Kolaborasi Bersama PT JMC Indonesia membangun aplikasi Maintenance Mesin PT Mesin Isuzu Indonesia.",
+    "title": "Machine Maintenance App",
+    "description": "Collaborated with PT JMC Indonesia to build a machine maintenance and monitoring system for PT Mesin Isuzu Indonesia.",
     "image": "proyek3.png",
     "techStack": ["HTML", "Yii2", "Bootstrap"]
   },
   {
     "id": 4,
     "title": "PICASO",
-    "description": "PCS Invetory Control And Asset Management Hasil Kolaborasi dengan PCS Group Indonesia.",
+    "description": "PCS Inventory Control and Asset Management platform, built in collaboration with PCS Group Indonesia.",
     "image": "proyek4.png",
     "techStack": ["React.js", "MUI", "Echarts"]
   },
   {
     "id": 5,
     "title": "Company Profile PT MJA",
-    "description": "Profile perusahaan untuk PT MJA hasil kolaborasi bersama PT Netindo Solution Group.",
+    "description": "A corporate company profile website for PT MJA, developed in collaboration with PT Netindo Solution Group.",
     "image": "proyek5.png",
     "techStack": ["Nuxt.js", "TypeScript", "Tailwind CSS"]
   },
   {
     "id": 6,
     "title": "Employee App",
-    "description": "Employee App Hasil Kolaborasi dengan PCS Group Indonesia.",
+    "description": "An internal employee management application developed in collaboration with PCS Group Indonesia.",
     "image": "proyek6.png",
     "techStack": ["React.js", "Tailwind CSS"]
   },
   {
     "id": 7,
-    "title": "Aplikasi Pertambangan",
-    "description": "Aplikasi untuk mempermudah proses bisnis di perusahaan pertambangan AMP BIO Group hasil kolaborasi dengan PT JMC Indonesia.",
+    "title": "Mining Operations App",
+    "description": "An enterprise web system designed to streamline business workflows for mining company AMP BIO Group, in collaboration with PT JMC Indonesia.",
     "image": "proyek7.png",
     "techStack": ["HTML", "Yii2", "Bootstrap"]
   },
   {
     "id": 8,
     "title": "Dutch With Cio",
-    "description": "Aplikasi untuk belajar bahasa Belanda hasil kolaborasi dengan Evara Indonesia.",
+    "description": "An interactive Dutch language learning web application built in collaboration with Evara Indonesia.",
     "image": "proyek8.png",
     "techStack": ["React.js", "TypeScript", "Tailwind CSS"]
   },
   {
     "id": 9,
     "title": "GOLFetc",
-    "description": "Company Profile untuk GOLFetc PT Kelola Sportindo hasil kolaborasi dengan Evara Indonesia ",
+    "description": "A corporate website for GOLFetc (PT Kelola Sportindo), developed in collaboration with Evara Indonesia.",
     "image": "proyek9.png",
     "techStack": ["HTML", "Laravel", "Tailwind CSS"]
   }

@@ -86,7 +86,7 @@ onUnmounted(() => {
   <section
     id="about"
     ref="sectionRef"
-    class="relative pt-20 lg:pt-26 overflow-hidden"
+    class="relative py-20 lg:py-26 overflow-hidden"
   >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
       <div class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
