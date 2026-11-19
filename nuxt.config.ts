@@ -26,6 +26,7 @@ export default defineNuxtConfig({
         { name: 'author', content: 'Anggin Megantara' },
         { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
         { name: 'googlebot', content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' },
+        { name: 'google-site-verification', content: 'S2MuTz0esGVvaA-5DJ5LT_km2IZUbim9ARCS38Z0i0o' },
 
         // Open Graph / Facebook / WhatsApp / LinkedIn
         { property: 'og:type', content: 'website' },
