@@ -70,7 +70,7 @@ onMounted(() => {
                 Waduh, pakai HP ya?
               </h3>
               <p class="text-sm text-slate-300 leading-relaxed">
-                Portofolio ini dirancang penuh animasi dan detail interaktif. Biar <span class="text-white font-medium">experience-nya makin maksimal</span> dan aesthetic, rekomen banget buka via PC atau Laptop ya!
+                Portofolio ini dirancang penuh animasi dan detail interaktif. Supaya <span class="text-white font-medium">experience-nya makin Josjis</span>, tak saranin buka via PC atau Laptop ya!
               </p>
             </div>
 
